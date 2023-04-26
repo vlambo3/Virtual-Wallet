@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'customer-dev'
+      MYSQL_USER: 'usr-customer'
+      MYSQL_PASSWORD: 'pwd-customer'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3366:3306'
+    expose:
+      - '3366'
+   
